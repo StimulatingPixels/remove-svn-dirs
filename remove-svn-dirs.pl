@@ -53,18 +53,32 @@ else
 
 sub killSvnDirs
 {
+
+  ### move the file/dir name into a local variable
   my $chkName = $_;
+  
+  ### move the full file/dir path into a local vairable.
   my $chkPath = $File::Find::name;
+  
+  ### check to see if the file name is ".svn".
   if($chkName eq '.svn')
   {
+  
+    ### check to see if the .svn that was found is a directory.
     if(-d $chkPath)
     {
+    
+      ### try to remove the .svn directory.
       if(rmtree($chkPath))
       {
+        ### print a note if it worked.
         printf("Removed: %s\n", $chkPath);
       }
+      
+      ### catch issues where the dir couldn't be removed
       else
       {
+        ### print a note identifying which dir couldn't be removed.
         printf("ERROR - Could not remove: %s\n", $chkPath);
       }
       
