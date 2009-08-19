@@ -1,0 +1,7 @@
+remove-svn-dirs.pl
+
+This is a simple script to look at a specific directory tree and remove all the .svn subdirectories (and their contents). 
+
+From: Stimulating Pixels
+http://www.stimulatingpixels.com/
+
