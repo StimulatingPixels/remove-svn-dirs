@@ -99,7 +99,7 @@ sub noArgError
 {
   print <<EOP;
 Usage: 
-  remove-svn-dirs.pl DIRECTORY
+  perl remove-svn-dirs.pl DIRECTORY
 
 ERROR: You must pass a directory to this script.
   
@@ -116,7 +116,7 @@ sub notDirError
 {
   print <<EOP;
 Usage: 
-  remove-svn-dirs.pl DIRECTORY
+  perl remove-svn-dirs.pl DIRECTORY
 
 ERROR: The argument you passed to the script must be a diretory.
 
